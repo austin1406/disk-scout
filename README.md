@@ -1,5 +1,7 @@
 # disk-scout
 
+[![CI](https://github.com/austin1406/disk-scout/actions/workflows/ci.yml/badge.svg)](https://github.com/austin1406/disk-scout/actions/workflows/ci.yml)
+
 A small C++17 command-line tool that scans a folder in parallel and tells you what is using
 your disk, including which dev artifacts (`node_modules`, virtualenvs, caches) you could
 regenerate. It is **report-only: it never deletes anything.**
@@ -75,7 +77,7 @@ and 16 threads, symlinks, empty and missing roots), reclaimable detection (case-
 nesting, age from the newest file), and the output formatting.
 
 Built and tested locally with MSVC 19.44 on Windows. `.github/workflows/ci.yml` builds and
-tests on Windows (MSVC) and Ubuntu (GCC).
+runs all the tests on every push on both Windows (MSVC) and Ubuntu (GCC); both pass.
 
 ## Limitations
 
